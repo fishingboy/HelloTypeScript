@@ -1,0 +1,17 @@
+<script>
+// ES6 有 class 了
+class Man {
+    constructor(name) {
+        this.name = name;
+    }
+    console() {
+        console.log(this.name);
+    }
+    alert() {
+        alert("Man's name = " + this.name);
+    }
+}
+const man = new Man("Leo");
+man.console();
+man.alert()
+</script>
