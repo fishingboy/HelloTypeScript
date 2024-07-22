@@ -11,5 +11,17 @@
     // 匿名程式寫法 2
     doit(l => {
         alert(2);
+
+        // 會 undefined
+        console.log(l);
     });
+
+    // 匿名程式寫法 3
+    doit((a=3) => {
+        alert(a);
+    });
+
+    // 會 undefined
+    // console.log(l);
+
 </script>
