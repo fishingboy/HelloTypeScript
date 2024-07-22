@@ -1,0 +1,15 @@
+<script>
+    let name = 'leo';
+    const age = 2;
+    const arr = [name];
+    alert("name = " + name + ", age = " + age + ", arr = " + JSON.stringify(arr))
+
+    // 怪了 const 的值可以塞？？
+    arr[0] = 2;
+    arr.push("ccc")
+    alert("name = " + name + ", age = " + age + ", arr = " + JSON.stringify(arr))
+
+    // 但變數就不可以改了，會直接出錯！
+    age = 3;
+    alert("name = " + name + ", age = " + age + ", arr = " + JSON.stringify(arr))
+</script>
