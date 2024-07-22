@@ -1,0 +1,22 @@
+<script>
+// @todo: 試不出來，改天再試
+
+function getData() {
+    console.log(1);
+    let data = await getApiData();
+    console.log(2);
+    return data;
+}
+
+async function getApiData()
+{
+    sleep(3);
+    return 1;
+}
+
+function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
+a = getData();
+alert(a);
+</script>
