@@ -1,0 +1,8 @@
+# 從nginx建置鏡像檔
+FROM nginx:1.29.0
+
+# 複製 Nginx 配置文件到容器中
+COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
+
+# 設定  alias
+RUN echo "alias ll='ls -al'" >> /root/.bashrc

@@ -7,3 +7,8 @@ https://www.typescriptlang.org/
 
 Vite
 https://vitejs.dev/guide/
+
+## 開啟測試環境
+```shell
+task start
+```

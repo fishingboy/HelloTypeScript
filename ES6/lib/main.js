@@ -1,2 +1,2 @@
 import { sub } from './utils.js';
-sub(1,2)
+alert(sub(1,2))

@@ -1,0 +1,18 @@
+version: '3'
+
+tasks:
+  # 啟動伺服器
+  start:
+    cmds:
+      # 啟動nginx
+      - docker build -t hello-typescript-nginx -f docker/docker-nginx .
+      - docker rm -f -v hello-typescript-nginx || true
+      - docker run -d --hostname hello-typescript-nginx --name hello-typescript-nginx 
+        --mount type=bind,source="D:\Project-Other\HelloTypeScript",target="/var/www/html"
+        -p 8888:80 hello-typescript-nginx
+      # 清除懸空鏡像
+      - docker image prune -f
+      # 開啟瀏灠器
+      - sleep 20
+      - cmd: cmd /c start chrome http://localhost:8888
+
